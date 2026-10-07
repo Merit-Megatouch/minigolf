@@ -2,61 +2,12 @@
 # megatouch-host loads the game with RTLD_NOW, so each of these must be defined
 # (usually in src/host/loader_services.cpp) before the game will start.
 # symbol | needed by
-BonusPlay | minigolf.so
-FileExists(char const*) | minigolf.so
-GetTouchCoord(int*, int*, int*) | minigolf.so
-GetHelpFileName(char (&) [255], char const*, Locale::Languages, char const*) | minigolf.so
-MeritthonDisplayRound(int, int, int, unsigned long) | minigolf.so
-PlayWave(char*, unsigned short, int, int, int, bool) | minigolf.so
+TwDrvFifo_close | libtouchscreen.so
+TwDrvFifo_ioctl | libtouchscreen.so
+TwDrvFifo_open | libtouchscreen.so
+TwDrvFifo_read | libtouchscreen.so
+TwDrvFifo_write | libtouchscreen.so
 KeyManager::GetInstance() | minigolf.so
-ScreenInfo::GetInstance() | minigolf.so
-TextSystem::LoadTranslations(xml_gameinfo::GameIds) | minigolf.so
-TextSystem::GetSpriteChannels(char const*, unsigned char**, unsigned char**, int, int, bool, bool, int, float) | minigolf.so
-TextSystem::SetTextDescription(TextDesc const&) | minigolf.so
-Translator::nTranslate(char*, unsigned int, char const*) | minigolf.so
-WorldClass::WorldClass() | minigolf.so
-system_info::SystemInfo::GetInstance() | minigolf.so
-system_info::SystemInfo::IsPlatformForce() | minigolf.so
-system_info::SystemInfo::IsPlatformGameTime() | minigolf.so
-MegacGlobals::SaveScreen() | minigolf.so
-MegacGlobals::RestoreScreen() | minigolf.so
-CoinJamManager::RegisterCallback(void (*)(bool)) | minigolf.so
-CoinJamManager::UnregisterCallback(void (*)(bool)) | minigolf.so
-CoinJamManager::Instance() | minigolf.so
-ContinueControl::display(unsigned int, unsigned int, unsigned int) | minigolf.so
-Books::LogCategoryPlays(xml_gameinfo::GameIds, int, int) | minigolf.so
-Books::Instance() | minigolf.so
-Colour::black | minigolf.so
-Colour::white | minigolf.so
-Locale::LanguageManager::IndexOf(Locale::Languages) | minigolf.so
-TextDesc::SetFontName(char const*) | minigolf.so
-TextUtils::ConvertToMarkup(char const*) | minigolf.so
-TextUtils::MeritStringToUTF8(char const*) | minigolf.so
 KeyManager::Country() const | minigolf.so
 KeyManager::IsNJKey() const | minigolf.so
 HighScoresManager::WinnersMask() const | minigolf.so
-layout::ScreenControl::GetCurrentWidth() const | minigolf.so
-layout::ScreenControl::GetCurrentHeight() const | minigolf.so
-vtable for DOSLinuxWorld | minigolf.so
-allegro_gl_flip | minigolf.so
-blit | minigolf.so
-create_bitmap_ex | minigolf.so
-destroy_bitmap | minigolf.so
-gluCylinder | minigolf.so
-gluDeleteQuadric | minigolf.so
-gluLookAt | minigolf.so
-gluNewQuadric | minigolf.so
-gluPerspective | minigolf.so
-gluQuadricDrawStyle | minigolf.so
-gluQuadricNormals | minigolf.so
-gluSphere | minigolf.so
-install_int | minigolf.so
-masked_blit | minigolf.so
-mouse_b | minigolf.so
-mouse_x | minigolf.so
-mouse_y | minigolf.so
-position_mouse | minigolf.so
-remove_int | minigolf.so
-screen | minigolf.so
-voice_check | minigolf.so
-voice_ramp_volume | minigolf.so
